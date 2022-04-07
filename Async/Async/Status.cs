@@ -12,6 +12,7 @@ namespace Async
 - Id  
 - Title
 - Content*/
+        private static int  _id;
         public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
@@ -19,9 +20,9 @@ namespace Async
 */      private DateTime _shareddata;
         public DateTime SharedDate { get; set; }
 
-        public Status(DateTime sharedateTime)
+        public Status()
         {
-            SharedDate = sharedateTime;
+     SharedDate = DateTime.Now;
 
 
         }
@@ -35,7 +36,8 @@ namespace Async
         /* Title, content olmadan status obyekti yaratmaq olmaz.*/
         public Status(string title , string content)
         {
-            Title = title; Content = content; 
+            Title = title; Content = content;
+            _id++;
         }
 
 
