@@ -17,8 +17,25 @@ namespace Async
         public string Content { get; set; }
         /*- SharedDate - DateTime tipindən bir property, statusdan yeni bir obyekt yaranan zaman yarandığı tarix set olunacaq.
 */      private DateTime _shareddata;
-        public DateTime SharedDate { get { return _shareddata; } set {  } }
+        public DateTime SharedDate { get; set; }
 
+        public Status(DateTime sharedateTime)
+        {
+            SharedDate = sharedateTime;
+
+
+        }
+
+        public void GetStatusInfo()
+        {
+            Console.WriteLine($"{Title}: test tittle\n" +
+                $"{Content} : test content {SharedDate.Second}  ");
+
+
+
+        } 
+
+        
 
 
     }
