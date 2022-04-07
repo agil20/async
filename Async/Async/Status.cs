@@ -31,11 +31,15 @@ namespace Async
             Console.WriteLine($"{Title}: test tittle\n" +
                 $"{Content} : test content {SharedDate.Second}  ");
 
+        }
+        /* Title, content olmadan status obyekti yaratmaq olmaz.*/
+        public Status(string title , string content)
+        {
+            Title = title; Content = content; 
+        }
 
 
-        } 
 
-        
 
 
     }
